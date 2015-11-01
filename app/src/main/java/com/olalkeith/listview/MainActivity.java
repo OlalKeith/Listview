@@ -25,9 +25,7 @@ public class MainActivity extends AppCompatActivity {
                 "Blackberry", "WebOS", "Ubuntu", "Windows7", "Max OS X",
                 "Linux", "OS/2" };
 
-        ListAdapter theAdapter = new ArrayAdapter<String>(this,
-                R.layout.row_layout, R.id.textView1,
-                values);
+        ListAdapter theAdapter = new MyAdapter(this, values);
 
         ListView theListView = (ListView) findViewById(R.id.thelistview);
         theListView.setAdapter(theAdapter);
